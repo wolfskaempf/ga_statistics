@@ -7,11 +7,7 @@
 {% endblock %}
 
 
-{% block navbar %}
-
-{% include 'navbar.html' %}
-
-{% endblock %}
+{% block navbar %} {% include 'navbar.html' %} {% endblock %}
 
 {% block content %}
 
@@ -21,7 +17,7 @@
   <div class="container">
     <h1>We 💙 stats!</h1>
     <p>And you probably do too. Especially during GA statistics can be super interesting and often reveal never thought possible perspectives.</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Jump right in!</a></p>
+    <p><a class="btn btn-primary btn-lg" href="{% url 'statistics' %}" role="button">Jump right in!</a></p>
   </div>
 </div>
 
@@ -31,7 +27,7 @@
     <div class="col-md-4">
       <h2>Open Source</h2>
       <p>This project is open souce and we encourage you to contribute! It's maintained on GitHub so that everyone can look at the code and improve it. We can't wait to see you messing with the project. Don't worry, you can't break anything.</p>
-      <p><a class="btn btn-default" href="#" role="button">View on GitHub &raquo;</a></p>
+      <p><a class="btn btn-default" href="http://github.com/wolfskaempf" role="button">View on GitHub &raquo;</a></p>
     </div>
     <div class="col-md-4">
       <h2>Live Feedback</h2>
