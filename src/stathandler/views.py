@@ -7,7 +7,7 @@ from .forms import DummyForm
 
 def statistics(request):
     dummynumbers = DummyData.objects.all()
-    return render_to_response('statistics.html', {'numbers': dummynumbers})
+    return render(request, 'statistics.html', {'numbers': dummynumbers})
 
 
 def submit(request):
@@ -18,6 +18,4 @@ def submit(request):
 
     context = {'form': form}
 
-
-
-    return render_to_response('submit.html', locals(), context_instance=RequestContext(request))
+    return render(request, 'submit.html', context)
