@@ -11,9 +11,13 @@
 
 {% block content %}
 
+{% for number in numbers %}
+
 <div class="container">
   <h1>Placeholder for the statistics</h1>
-  <h2>{{ number }}</h2>
+  <h2>{{ number.number }}</h2>
 </div>
+
+{% endfor %}
 
 {% endblock %}
