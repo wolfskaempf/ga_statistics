@@ -1,4 +1,5 @@
 from django.shortcuts import render, render_to_response, RequestContext
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -9,7 +10,7 @@ def statistics(request):
     dummynumbers = DummyData.objects.all()
     return render(request, 'statistics.html', {'numbers': dummynumbers})
 
-
+@login_required(login_url = '/admin/')
 def submit(request):
     form = DummyForm(request.POST or None)
 
