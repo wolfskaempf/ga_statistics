@@ -3,12 +3,13 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-from .models import DummyData
+from .models import DummyData, Committee, CommitteeStatistic
 from .forms import DummyForm
 
 def statistics(request):
-    dummynumbers = DummyData.objects.all()
-    return render(request, 'statistics.html', {'numbers': dummynumbers})
+    committee = Committee.objects.all()
+    committeestatistic = CommitteeStatistic.objects.all()
+    return render(request, 'statistics.html', {'committee': committee, 'committeestatistic': committeestatistic})
 
 @login_required(login_url = '/admin/')
 def submit(request):
