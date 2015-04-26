@@ -2,9 +2,7 @@
 
 {% load staticfiles %}
 
-{% block title %}
-<title>Statistics | GA Statistics</title>
-{% endblock %}
+{% block header_title %}Statistics{% endblock %}
 
 
 {% block navbar %} {% include 'navbar.html' %} {% endblock %}
@@ -14,10 +12,20 @@
 
 
 <div class="container">
-  <h1>Placeholder for the statistics</h1>
-  {% for number in numbers %}
-  <h2>{{ number.number }}</h2>
-  {% endfor %}
+  <div class="row">
+    {% for committee in committee %}
+      <div class="col-md-4">
+        <h1>{{ committee.acronym }} <a href="{% url 'statistics' %}{{ committee.pk }}"><small>View</small></a></h1>
+        <h6>
+          {{ committee.longName }}
+        </h6>
+        <p>
+          {{ committee.topic }}
+        </p>
+      </div>
+      {% cycle "" "" "</div><div class='row'>" %}
+    {% endfor %}
+  </div>
 </div>
 
 
