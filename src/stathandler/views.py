@@ -1,5 +1,7 @@
+import operator
 from django.shortcuts import render, render_to_response, RequestContext
 from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 
@@ -8,7 +10,8 @@ from .forms import DummyForm
 
 def committee_list(request):
     """ This view serves the list of all the committees displayed after clicking Statistics """
-    committee = Committee.objects.all()
+
+    committee = Committee.objects.order_by('gaPosition')
     return render(request, 'committee_list.html', {'committee': committee})
 
 def committee_single(request, pk):
