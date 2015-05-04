@@ -6,6 +6,9 @@ from django.db import models
 class DummyData(models.Model):
     number = models.CharField(max_length=100)
 
+    def __unicode__(self):
+        return self.number
+
 
 class Committee(models.Model):
     acronym = models.CharField(max_length=10)
