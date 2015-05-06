@@ -3,10 +3,13 @@
  * https://github.com/simonwhitaker/github-fork-ribbon-css
 */
 
+
 /* Left will inherit from right (so we don't need to duplicate code) */
 .github-fork-ribbon {
   /* The right and left classes determine the side we attach our banner to */
   position: absolute;
+
+
 
   /* Add a bit of padding to give some substance outside the "stitching" */
   padding: 2px 0;
@@ -30,7 +33,7 @@
   /* Set the font */
   font: 700 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  z-index: 9999;
+  z-index: 1;
   pointer-events: auto;
 }
 
@@ -64,7 +67,7 @@
   position: absolute;
   overflow: hidden;
   top: 0;
-  z-index: 9999;
+  z-index: 1;
   pointer-events: none;
 }
 
