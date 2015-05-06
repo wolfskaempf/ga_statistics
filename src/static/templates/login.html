@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block header_title %}Login{% endblock %}
+
+
+{% block navbar %} {% include 'navbar.html' %} {% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1>
+    Please login to submit data.
+  </h1>
+
+  <p>
+    <form action="" method="post"> {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Login">
+    </form>
+
+  </p>
+
+</div>
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% include 'footer.html' %}
+{% endblock %}
