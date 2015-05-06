@@ -12,4 +12,6 @@ urlpatterns = [
     url(r'^statistics/(?P<pk>\d+)/$', 'stathandler.views.committee_single', name='statistics'),
     url(r'^submit/', 'stathandler.views.submit', name='submit'),
     url(r'^about$', 'web.views.about', name='about'),
+    url(r'^login/$', 'ga_auth.views.ga_login', name='login'),
+    url(r'^logout/$', 'ga_auth.views.ga_logout', name='logout'),
 ]
