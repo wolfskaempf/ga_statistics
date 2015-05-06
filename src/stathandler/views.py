@@ -23,7 +23,7 @@ def committee_single(request, pk):
     return render(request, 'committee_single.html', {'committee': committee, 'pk': pk})
 
 
-@login_required(login_url = '/admin/')
+@login_required(login_url = '/login/')
 def submit(request):
     """ This view requires the user to be logged in. When it's finished, it'll show a form which can be used to submit the data which is displayed in the committee_single view """
     form = DummyForm(request.POST or None)
