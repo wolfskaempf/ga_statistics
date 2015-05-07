@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 {% load staticfiles %}
 
 {% block header_title %}Login{% endblock %}
@@ -9,18 +9,12 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container col-lg-offset-4">
   <h1>
-    Please login to submit data.
+    <small>Log in to submit data</small>
   </h1>
 
-  <p>
-    <form action="" method="post"> {% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" value="Login">
-    </form>
-
-  </p>
+    {% crispy form %}
 
 </div>
 
