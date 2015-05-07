@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'stathandler',
     'ga_auth',
     'web',
+    'crispy_forms'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -70,6 +71,10 @@ TEMPLATES = [
         },
     },
 ]
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
 
 WSGI_APPLICATION = 'ga_statistics.wsgi.application'
 
