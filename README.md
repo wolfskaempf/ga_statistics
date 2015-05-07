@@ -9,9 +9,9 @@ Welcome! We aim to provide a reusable GA Statistics app that can be used on any 
 
 No, but you can help! Contact @wolfskaempf or just start working on any of the [Issues](https://github.com/wolfskaempf/ga_statistics/issues) currently open and send a pull request when you're finished.
 
-## How To Use `ga_statistics` on your Session
+## How To Use `ga_statistics` during your Session
 
-To find more information on how to use `ga_statistics`on your session see the wiki page on [How To Use GA Statistics](https://github.com/wolfskaempf/ga_statistics/wiki/How-To-Use-GA-Statistics).
+To find more information on how to use `ga_statistics` during your session have a look at the wiki page on [How To Use GA Statistics](https://github.com/wolfskaempf/ga_statistics/wiki/How-To-Use-GA-Statistics).
 
 
 ## I would like this and that

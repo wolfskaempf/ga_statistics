@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model, authenticate, login, logout
 # Create your views here.
 
 def ga_login(request):
-
+# This view is shown, when a user tries to view the submit form, but isn't logged in. After they log in, they'll be taken to /submit/.
     form = LoginForm(request.POST or None)
 
     if form.is_valid():
@@ -33,5 +33,7 @@ def ga_login(request):
 
 
 def ga_logout(request):
+    # If the user visits /logout/ he will be logged out.
+    
     logout(request)
     return HttpResponseRedirect('/')
