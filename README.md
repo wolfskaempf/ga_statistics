@@ -1,7 +1,7 @@
 # ga_statistics
 Catering all the statistics lovers of the European Youth Parliament
 
-Welcome! We aim to provide a reusable GA Statistics app that can be used on any given session with any set of committees. It's completely open source and uses [Python](http://python.org) with the [Django Web Framework](https://www.djangoproject.com/).
+Welcome! We aim to provide a reusable GA Statistics app that can be used on any given session with any set of committees. It's completely open source and uses [Python](http://python.org) in conjunction with the [Django Web Framework](https://www.djangoproject.com/).
 
 ***
 
@@ -20,7 +20,7 @@ Please feel free to share your ideas! We'd love to hear them! Just add them to t
 
 
 ## How to help make `ga_statistics` better
-You can just start working and send a pull request! If you don't know what that means, ask @wolfskaempf for help.
+You can just start working on any of the open issued and send a pull request! If you don't know what that means, ask @wolfskaempf for help.
 
 ## I don't know how I got here, what is all of this?
 
