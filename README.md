@@ -21,3 +21,9 @@ Please feel free to share your ideas! We'd love to hear them! Just add them to t
 
 ## How to help make `ga_statistics` better
 You can just start working and send a pull request! If you don't know what that means, ask @wolfskaempf for help.
+
+## I don't know how I got here, what is all of this?
+
+If you don't know what the `EYP` (European Youth Parliament) is, read through our [Wikipedia Article](http://en.wikipedia.org/wiki/European_Youth_Parliament) or visit our [website](http://eypej.org).
+
+Every time the people who are part of this organisation gather for a large event, a part of this event is called the `GA`. It stands for [General Assembly](http://en.wikipedia.org/wiki/General_assembly) and it's exactly that. During the `GA` the participants will discuss different topics in various manners. We designed `ga_statistics` to keep track of all of this data and make it nice and easy to collect and display it.
