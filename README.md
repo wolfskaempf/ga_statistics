@@ -9,7 +9,7 @@ Welcome! We aim to provide a reusable GA Statistics app that can be used on any 
 
 No, but you can help! Contact @wolfskaempf or just start working on any of the [Issues](https://github.com/wolfskaempf/ga_statistics/issues) currently open and send a pull request when you're finished.
 
-# What does it look like at the moment?
+## What does it look like at the moment?
 
 You can view a more or less frequently updated version of the most recent commit [here](http://gastatistics.wiesenblu.me). You can log in to the admin interface [here](http://gastatistics.wiesenblu.me/admin). Username "tom" and password "a" will work. 
 
