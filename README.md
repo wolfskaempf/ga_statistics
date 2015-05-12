@@ -5,6 +5,10 @@ Welcome! We aim to provide a reusable GA Statistics app that can be used on any 
 
 ***
 
+![example image ga_statistics](http://i.imgur.com/VHTAmcB.png "Example Image ga_statistics")
+
+***
+
 ## Is `ga_statistics` ready to be used?
 
 No, but you can help! Contact @wolfskaempf or just start working on any of the [Issues](https://github.com/wolfskaempf/ga_statistics/issues) currently open and send a pull request when you're finished.
