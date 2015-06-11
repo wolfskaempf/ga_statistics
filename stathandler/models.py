@@ -27,7 +27,7 @@ class Committee(models.Model):
 class CommitteeStatistic(models.Model):
     # This model will contain the statistical information about the committee it's linked to by the ForeignKey. If AGRI says 5 things about clause 3 that ENVI wrote, this should be saved here with ENVI being the Foreign Key.
     committee = models.ForeignKey(Committee)
-    funFactDummy = models.TextField()
+    point_resume = models.CharField(max_length=1000)
 
     def __unicode__(self):
         return self.committee.acronym

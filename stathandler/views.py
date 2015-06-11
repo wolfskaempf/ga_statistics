@@ -20,7 +20,9 @@ def committee_single(request, pk):
 
     committee = Committee.objects.get(pk=pk)
 
-    return render(request, 'committee_single.html', {'committee': committee, 'pk': pk})
+    recent_points = CommitteeStatistic.objects.filter(committee=pk)
+
+    return render(request, 'committee_single.html', {'committee': committee, 'pk': pk, 'recent_points': recent_points})
 
 
 @login_required(login_url = '/login/')

@@ -17,6 +17,15 @@
           <h2>MOTION FOR A RESOLUTION BY {{ committee.longName|upper }}</h1>
           <p class="lead">
             {{ committee.topic }}
+
+          <h2>The last few points</h2>
+
+            {% for point in recent_points %}
+
+            <h3> {{ point.point_resume }} </h3>
+
+            {% endfor %}
+
           </p>
         </div>
   </div>
