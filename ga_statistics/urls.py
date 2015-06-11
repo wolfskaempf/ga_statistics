@@ -5,7 +5,7 @@ urlpatterns = [
     # Examples:
     # url(r'^$', 'ga_statistics.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    
+
     # This file defines which view will be shown when the corresponding URL is requested.
 
     url(r'^admin/', include(admin.site.urls)),
@@ -15,5 +15,6 @@ urlpatterns = [
     url(r'^submit/', 'stathandler.views.submit', name='submit'),
     url(r'^login/$', 'ga_auth.views.ga_login', name='login'),
     url(r'^logout/$', 'ga_auth.views.ga_logout', name='logout'),
+    url(r'^dummy/$', 'stathandler.views.dummy_view', name='dummy'),
     url(r'^about/$', 'web.views.about', name='about'),
 ]
