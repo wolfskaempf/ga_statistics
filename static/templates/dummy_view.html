@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+<title>Dummy | GA Statistics</title>
+{% endblock %}
+
+
+{% block navbar %} {% include 'navbar.html' %} {% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h1>You can see the submitted Dummy Datas here</h1>
+
+  {% for dummy_data in dummy_data %}
+
+  <h2>{{ dummy_data }}</h2>
+
+  {% endfor %}
+
+</div>
+
+{% endblock %}
