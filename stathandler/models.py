@@ -23,6 +23,9 @@ class Committee(models.Model):
         # This function defines what the object will return when it's viewed as a whole.
         return self.acronym
 
+    class Meta:
+        ordering = ["gaPosition"]
+
 
 class CommitteeStatistic(models.Model):
     # This model will contain the statistical information about the committee it's linked to by the ForeignKey. If AGRI says 5 things about clause 3 that ENVI wrote, this should be saved here with ENVI being the Foreign Key.
