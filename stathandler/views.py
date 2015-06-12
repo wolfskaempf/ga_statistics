@@ -8,11 +8,17 @@ from django.contrib.auth.decorators import login_required
 from .models import DummyData, Committee, CommitteeStatistic
 from .forms import DummyForm
 
+
+
+
 def committee_list(request):
     """ This view serves the list of all the committees displayed after clicking Statistics """
 
     committee = Committee.objects.order_by('gaPosition')
     return render(request, 'committee_list.html', {'committee': committee})
+
+
+
 
 def committee_single(request, pk):
     """ This view serves the actual statistics for each proposing committee """
@@ -23,6 +29,10 @@ def committee_single(request, pk):
     recent_points = CommitteeStatistic.objects.filter(committee=pk)
 
     return render(request, 'committee_single.html', {'committee': committee, 'pk': pk, 'recent_points': recent_points})
+
+
+
+
 
 
 @login_required(login_url = '/login/')
