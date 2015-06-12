@@ -35,3 +35,5 @@ class CommitteeStatistic(models.Model):
     def __unicode__(self):
         return self.point_resume
 
+    class Meta:
+        ordering = ["-pk"]
