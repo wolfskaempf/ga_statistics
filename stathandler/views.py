@@ -48,12 +48,3 @@ def submit(request):
     context = {'form': form}
 
     return render(request, 'submit.html', context)
-
-
-
-
-def dummy_view(request):
-    """ This view serves the list of all the dummy datas """
-
-    dummy_data = DummyData.objects.all()
-    return render(request, 'dummy_view.html', {'dummy_data': dummy_data})

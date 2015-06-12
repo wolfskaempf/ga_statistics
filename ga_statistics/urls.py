@@ -15,6 +15,5 @@ urlpatterns = [
     url(r'^submit/', 'stathandler.views.submit', name='submit'),
     url(r'^login/$', 'ga_auth.views.ga_login', name='login'),
     url(r'^logout/$', 'ga_auth.views.ga_logout', name='logout'),
-    url(r'^dummy/$', 'stathandler.views.dummy_view', name='dummy'),
     url(r'^about/$', 'web.views.about', name='about'),
 ]
