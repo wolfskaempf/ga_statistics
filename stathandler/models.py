@@ -33,4 +33,5 @@ class CommitteeStatistic(models.Model):
     point_resume = models.CharField(max_length=1000)
 
     def __unicode__(self):
-        return self.committee.acronym
+        return self.point_resume
+
