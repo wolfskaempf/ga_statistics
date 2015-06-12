@@ -26,7 +26,9 @@ def committee_single(request, pk):
 
     committee = Committee.objects.get(pk=pk)
 
-    recent_points = CommitteeStatistic.objects.filter(committee=pk)
+    all_points = CommitteeStatistic.objects.filter(committee=pk)
+
+    recent_points = all_points[:5]
 
     return render(request, 'committee_single.html', {'committee': committee, 'pk': pk, 'recent_points': recent_points})
 
