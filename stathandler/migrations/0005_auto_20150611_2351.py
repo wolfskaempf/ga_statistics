@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='committeestatistic',
-            name='point_resumes',
+            name='pointResumes',
             field=models.CharField(default='example', max_length=1000),
             preserve_default=False,
         ),
