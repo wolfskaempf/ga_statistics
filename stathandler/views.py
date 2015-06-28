@@ -22,13 +22,15 @@ def committee_list(request):
 
 def committee_single(request, pk):
     """ This view serves the actual statistics for each proposing committee """
-    committees = Committee.objects.all()
-
+    
+    #Every Committee has a unique primary key which can be used to identify it in the database
+    #The following code takes the primary key (pk) which is submitted via the url and is taken into the function above and uses it to get just the data of the single committee which has been clicked.
     committee = Committee.objects.get(pk=pk)
 
+    #BEGIN Point Resume Statistic Module
     all_points = CommitteeStatistic.objects.filter(committee=pk)
-
     recent_points = all_points[:5]
+    #END Point Resume Statistic Module
 
     return render(request, 'committee_single.html', {'committee': committee, 'pk': pk, 'recent_points': recent_points})
 
