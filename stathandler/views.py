@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 from .models import DummyData, Committee, CommitteeStatistic
-from .forms import DummyForm
+from .forms import CommitteeStatisticForm
 
 
 
@@ -40,7 +40,7 @@ def committee_single(request, pk):
 @login_required(login_url = '/login/')
 def submit(request):
     """ This view requires the user to be logged in. When it's finished, it'll show a form which can be used to submit the data which is displayed in the committee_single view """
-    form = DummyForm(request.POST or None)
+    form = CommitteeStatisticForm(request.POST or None)
 
     if form.is_valid():
         form.save()
