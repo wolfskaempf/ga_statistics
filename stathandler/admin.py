@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import DummyData, Committee, CommitteeStatistic
+from .models import Committee, CommitteeStatistic
 
 
 
@@ -14,6 +14,5 @@ class CommitteeAdmin(admin.ModelAdmin):
 
 # The following lines are responsible for making the Model Data that's inside the database available in the Django admin
 
-admin.site.register(DummyData)
 admin.site.register(Committee, CommitteeAdmin)
 admin.site.register(CommitteeStatistic)

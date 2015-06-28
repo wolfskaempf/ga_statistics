@@ -6,14 +6,7 @@ from crispy_forms.layout import Layout, Div, Submit, HTML, Button, Row, Field, B
 from crispy_forms.bootstrap import AppendedText, PrependedText, FormActions, StrictButton
 
 
-from .models import DummyData, CommitteeStatistic, Committee
-
-
-class DummyForm(forms.ModelForm):
-	# This is a dummy form. It'll be removed once the real form is in place.
-	class Meta:
-		model = DummyData
-		fields = ['number']
+from .models import CommitteeStatistic, Committee
 
 
 class CommitteeStatisticForm(forms.ModelForm):

@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-from .models import DummyData, Committee, CommitteeStatistic
+from .models import Committee, CommitteeStatistic
 from .forms import CommitteeStatisticForm
 
 
