@@ -11,11 +11,13 @@ Welcome! We aim to provide a reusable GA Statistics app that can be used on any 
 
 ## Is `ga_statistics` ready to be used?
 
-No, but you can help! Contact @wolfskaempf or just start working on any of the [Issues](https://github.com/wolfskaempf/ga_statistics/issues) currently open and send a pull request when you're finished.
+Yes, but you can still help to improve it! Contact @wolfskaempf or just start working on any of the [Issues](https://github.com/wolfskaempf/ga_statistics/issues) currently open and send a pull request when you're finished.
 
 ## What does it look like at the moment?
 
-You can view a more or less frequently updated version of the most recent commit [here](http://gastatistics.wiesenblu.me). You can log in to the admin interface [here](http://gastatistics.wiesenblu.me/admin). Username "tom" and password "a" will work. 
+It is possible to add any set of committees which will be displayed in conjunction with the finished statistics modules. At the moment point resumes can be submitted to be displayed as part of the committees individual page. These are automatically updated as Chairs submit them.
+
+You can view a more or less frequently updated version of the most recent commit [here](http://gastatistics.wiesenblu.me). You can log in to the admin interface [here](http://gastatistics.wiesenblu.me/admin). Username "tom" and password "a" will work.
 
 ## How To Use `ga_statistics` during your Session
 
