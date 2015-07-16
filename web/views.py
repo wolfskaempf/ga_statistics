@@ -8,6 +8,10 @@ def home(request):
     template = 'home.html'
     return render(request, template)
 
+def homemdl(request):
+    template = 'homemdl.html'
+    return render(request, template)
+
 def about(request):
     template = 'about.html'
     return render(request, template)

@@ -16,4 +16,5 @@ urlpatterns = [
     url(r'^login/$', 'ga_auth.views.ga_login', name='login'),
     url(r'^logout/$', 'ga_auth.views.ga_logout', name='logout'),
     url(r'^about/$', 'web.views.about', name='about'),
+    url(r'^mdl/$', 'web.views.homemdl', name='homemdl'),
 ]
