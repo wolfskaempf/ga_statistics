@@ -13,35 +13,36 @@ Submit
 {% block content %}
 
 <div class="container">
-  <h1>Submit new points here</h1>
-  {% if messages %}
-    {% for message in messages %}
-    <div class="alert alert-dismissable alert-success">
-      <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+  <div class="row">
+    <h1>Submit new points here</h1>
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-dismissable alert-success shadow-z-2">
+        <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+      </div>
+      {% endfor %}
+      <script type="text/javascript">
+      window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function(){
+          $(this).remove();
+        });
+      }, 10000);
+      </script>
+    {% endif %}
+    <div class="form-horizontal">
+
     </div>
-    {% endfor %}
-    <script type="text/javascript">
-    window.setTimeout(function() {
-      $(".alert").fadeTo(500, 0).slideUp(500, function(){
-        $(this).remove();
-      });
-    }, 10000);
-    </script>
-  {% endif %}
-  <div class="form-horizontal">
-
+    <div class="container well">
+      <form method="POST" action="" class="form-horizontal"> {% csrf_token %}
+      	<p>
+      	  Select the committee that is being discussed.
+      	</p>
+        {{ form.committee|add_class:"form-control" }}
+        {{ form.pointResume|add_class:"form-control"|attr:"placeholder:Write the point resume here." }}
+      	<input type="submit" class="form-control btn btn-lg btn-material-light-blue-800">
+      </form>
+    </div>
   </div>
-  <div class="container well">
-    <form method="POST" action="" class="form-horizontal"> {% csrf_token %}
-    	<p>
-    	  Select the committee that is being discussed.
-    	</p>
-      {{ form.committee|add_class:"form-control" }}
-      {{ form.pointResume|add_class:"form-control"|attr:"placeholder:Write the point resume here." }}
-    	<input type="submit" class="form-control btn btn-lg btn-material-light-blue-800">
-    </form>
-  </div>
-
 </div>
 
 {% endblock %}
