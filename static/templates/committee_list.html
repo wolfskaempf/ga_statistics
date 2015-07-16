@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 
-{% block header_title %}Statistics{% endblock %}
+{% block header_title %}Committees{% endblock %}
 
 
 {% block navbar %} {% include 'navbar.html' %} {% endblock %}
@@ -15,7 +15,7 @@
   <div class="row">
     {% for committee in committee %}
       <div class="col-md-4">
-        <h1> <a href="{% url 'statistics' committee.pk %}" class="btn btn-lg btn-material-light-blue-500">{{ committee.acronym }}</a></h1>
+        <h1> <a href="{% url 'committee_single' committee.pk %}" class="btn btn-lg btn-material-light-blue-500">{{ committee.acronym }}</a></h1>
         <h6>
           {{ committee.longName }}
         </h6>
