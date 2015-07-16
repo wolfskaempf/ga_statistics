@@ -1,5 +1,6 @@
 import operator
 from django.shortcuts import render, render_to_response, RequestContext
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
@@ -22,7 +23,7 @@ def committee_list(request):
 
 def committee_single(request, pk):
     """ This view serves the actual statistics for each proposing committee """
-    
+
     #Every Committee has a unique primary key which can be used to identify it in the database
     #The following code takes the primary key (pk) which is submitted via the url and is taken into the function above and uses it to get just the data of the single committee which has been clicked.
     committee = Committee.objects.get(pk=pk)
@@ -35,10 +36,6 @@ def committee_single(request, pk):
     return render(request, 'committee_single.html', {'committee': committee, 'pk': pk, 'recent_points': recent_points})
 
 
-
-
-
-
 @login_required(login_url = '/login/')
 def submit(request):
     """ This view requires the user to be logged in. When it's finished, it'll show a form which can be used to submit the data which is displayed in the committee_single view """
@@ -46,6 +43,7 @@ def submit(request):
 
     if form.is_valid():
         form.save()
+        messages.success(request, 'The form has successfully been submitted.')
 
     context = {'form': form}
 

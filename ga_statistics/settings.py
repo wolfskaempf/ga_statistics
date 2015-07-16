@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'stathandler',
     'ga_auth',
     'web',
-    'crispy_forms'
+    'crispy_forms',
+    'widget_tweaks',
 )
 
 MIDDLEWARE_CLASSES = (

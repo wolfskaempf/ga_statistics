@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load staticfiles %}
+{% load widget_tweaks %}
 
 {% block header_title %}
 Submit
@@ -13,10 +14,28 @@ Submit
 
 <div class="container">
   <h1>Submit new points here</h1>
-  <form method="POST" action=""> {% csrf_token %}
-	{{ form.as_p }}
-	<input type="submit">
-</form>
+  {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-dismissable alert-success">
+      <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+    </div>
+    {% endfor %}
+    <script type="text/javascript">
+    window.setTimeout(function() {
+      $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+      });
+    }, 10000);
+    </script>
+  {% endif %}
+  <div class="form-horizontal">
+
+  </div>
+  <form method="POST" action="" class="form-horizontal"> {% csrf_token %}
+  	{{ form.committee|add_class:"form-control" }}
+    {{ form.pointResume|add_class:"form-control"|attr:"placeholder:Write the point resume here." }}
+  	<input type="submit" class="form-control">
+  </form>
 </div>
 
 {% endblock %}
