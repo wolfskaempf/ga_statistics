@@ -5,7 +5,7 @@ Welcome! We aim to provide a reusable GA Statistics app that can be used on any 
 
 ***
 
-![example image ga_statistics](http://i.imgur.com/VHTAmcB.png "Example Image ga_statistics")
+![example image ga_statistics](http://i.imgur.com/0jdlDRu.png "Example Image ga_statistics")
 
 ***
 
