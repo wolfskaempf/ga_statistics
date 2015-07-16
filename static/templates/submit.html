@@ -31,11 +31,17 @@ Submit
   <div class="form-horizontal">
 
   </div>
-  <form method="POST" action="" class="form-horizontal"> {% csrf_token %}
-  	{{ form.committee|add_class:"form-control" }}
-    {{ form.pointResume|add_class:"form-control"|attr:"placeholder:Write the point resume here." }}
-  	<input type="submit" class="form-control">
-  </form>
+  <div class="container well">
+    <form method="POST" action="" class="form-horizontal"> {% csrf_token %}
+    	<p>
+    	  Select the committee that is being discussed.
+    	</p>
+      {{ form.committee|add_class:"form-control" }}
+      {{ form.pointResume|add_class:"form-control"|attr:"placeholder:Write the point resume here." }}
+    	<input type="submit" class="form-control btn btn-lg btn-material-light-blue-800">
+    </form>
+  </div>
+
 </div>
 
 {% endblock %}
