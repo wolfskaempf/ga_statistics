@@ -13,4 +13,4 @@ class CommitteeStatisticForm(forms.ModelForm):
 	# This is the form which is commonly used by chairs to submit data about the most recent point to the database. Data entered into this form will automatically show up on the screen during GA.
 	class Meta:
 		model = CommitteeStatistic
-		fields = ['committee', 'pointResume']
+		fields = ['proposingCommittee', 'pointResume']

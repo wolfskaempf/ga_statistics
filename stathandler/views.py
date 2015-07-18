@@ -29,7 +29,7 @@ def committee_single(request, pk):
     committee = Committee.objects.get(pk=pk)
 
     #BEGIN Point Resume Statistic Module
-    all_points = CommitteeStatistic.objects.filter(committee=pk)
+    all_points = CommitteeStatistic.objects.filter(proposingCommittee=pk)
     recent_points = all_points[:5]
     #END Point Resume Statistic Module
 
