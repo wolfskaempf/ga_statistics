@@ -32,12 +32,15 @@ Submit
     <div class="form-horizontal">
 
     </div>
-    <div class="container well">
+    <div class="container well form-group">
       <form method="POST" action="" class="form-horizontal"> {% csrf_token %}
-      	<p>
+      	<label class="control-label">
       	  Select the committee that is being discussed.
-      	</p>
+      	</label>
         {{ form.committee|add_class:"form-control" }}
+        <label class="control-label">
+      	  Point Resume
+      	</label>
         {{ form.pointResume|add_class:"form-control"|attr:"placeholder:Write the point resume here." }}
       	<input type="submit" class="form-control btn btn-lg btn-material-light-blue-800">
       </form>
