@@ -21,6 +21,7 @@ class Committee(models.Model):
 class CommitteeStatistic(models.Model):
     # This model will contain the statistical information about the committee it's linked to by the ForeignKey. If AGRI says 5 things about clause 3 that ENVI wrote, this should be saved here with ENVI being the Foreign Key.
     proposingCommittee = models.ForeignKey(Committee)
+    # This model will contain the statistical information about the committee it's linked to by the OneToOneField. If AGRI says 5 things about clause 3 that ENVI wrote, this should be saved here with ENVI being the OneToOneField and AGRI the ForeignKey.
     speakingCommittee = models.ForeignKey(Committee, related_name="+")
     pointResume = models.TextField()
 
