@@ -37,7 +37,7 @@ class CommitteeStatistic(models.Model):
     speakingCommittee = models.ForeignKey(Committee, related_name="+") #The related_name="+" meand that no backwards relation will be created for this ForeignKey. You can not call a set of this in relation to Committe as a cause of this.
 
     # This is the type of point that has been made. It can either be a DirectResponse or a normal Point at the moment. Of course, there are other types of points but these normally don't contribute to the debate which is why it might be good to leave them out.
-    pointType = models.CharField(max_length=20, choices=(("Point", "Point"), ("DirectResponse", "Direct Response")), default="Point")
+    pointType = models.CharField(max_length=20, choices=(("Point", "Point"), ("Direct Response", "Direct Response")), default="Point")
 
     # This field stores the contents of what has been said. It should be a (brief) resume of the point that has been made.
     pointResume = models.TextField()
