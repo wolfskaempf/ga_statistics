@@ -39,6 +39,14 @@ Submit
       	</label>
         {{ form.proposingCommittee|add_class:"form-control" }}
         <label class="control-label">
+      	  Select the committee that has just spoken.
+      	</label>
+        {{ form.speakingCommittee|add_class:"form-control" }}
+        <label class="control-label">
+      	  Select the type of point that has been made.
+      	</label>
+        {{ form.pointType|add_class:"form-control" }}
+        <label class="control-label">
       	  Point Resume
       	</label>
         {{ form.pointResume|add_class:"form-control"|attr:"placeholder:Write the point resume here." }}
