@@ -15,8 +15,8 @@ class Committee(models.Model):
     # This is the committees topic. It will be used in list and individual displays.
     topic = models.TextField()
 
-    # This is the position of the committe in GA. The committee with the number one will be displayed first, the one with number 2 second and so on.
-    gaPosition = models.CharField(max_length=3, null=True)
+    # This is the position of the committe in GA. The committee with the number 0.1 will be displayed first, the one with number 0.1 second and so on. The tenth committee would be 1 and the eleventh 1.1
+    gaPosition = models.IntegerField(null=True)
 
     def __unicode__(self):
         # This function defines what the object will return when it's viewed as a whole. This is especially practical for list views.
