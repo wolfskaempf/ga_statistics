@@ -1,6 +1,9 @@
 # ga_statistics
 Catering all the statistics lovers of the European Youth Parliament
 
+#Attention!
+The project is now continued inside of the eyp-developers organisation. You can find it here: https://github.com/eyp-developers/statistics
+
 Welcome! We aim to provide a reusable GA Statistics app that can be used on any given session with any set of committees. It's completely open source and uses [Python](http://python.org) in conjunction with the [Django Web Framework](https://www.djangoproject.com/).
 
 ***
